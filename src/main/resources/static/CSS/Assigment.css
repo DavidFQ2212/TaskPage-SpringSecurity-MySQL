@@ -1,0 +1,68 @@
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/IMG/Fondo.jpg');
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px white;
+    width: 80%;
+    background-color: #000000af;
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+.form-container:hover{
+    border: 2px solid rgb(253, 255, 135);
+    box-shadow: 2px 2px 10px rgb(255, 255, 138);
+}
+
+.input-field,
+.textarea-field {
+    border-radius: 10px;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffffe3;
+    border: none;
+    color: #000000;
+}
+.input-field:hover,
+.textarea-field:hover{
+    box-shadow: 2px 2px 10px white;
+}
+.textarea-field {
+ 
+    height: 60px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-container .input-field {
+    width: calc(50% - 10px);
+}
+
+.submit-button {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #7289DA;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    box-shadow: 2px 2px 10px white;
+    background-color: #4b5aff;
+}

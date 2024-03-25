@@ -1,0 +1,31 @@
+body {
+    background-image: url('/IMG/Fondo.jpg');
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: 2px solid white;
+    background-color: #141414bb;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.card:hover{
+border: 2px solid rgb(252, 252, 40);
+}
+.card-header {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    margin-bottom: 10px;
+}

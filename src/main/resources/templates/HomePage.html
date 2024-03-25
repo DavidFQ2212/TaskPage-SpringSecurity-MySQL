@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org" lang="es"></html>>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma de Gestión de Tareas</title>
+<link rel="stylesheet" href="/CSS/HomePage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Desarrollo de una Aplicación Web en Java con Spring Boot para Gestión de Tareas en Grupos de Trabajo</h1>
+        <div class="descripcion">
+            <p>En el mundo empresarial actual, la coordinación efectiva del trabajo en equipo es esencial para el éxito de cualquier proyecto. Para facilitar esta coordinación y asegurar un seguimiento adecuado de las tareas asignadas, se ha desarrollado una aplicación web utilizando Java con el framework Spring Boot. Esta aplicación proporciona una plataforma intuitiva y eficiente para la asignación y gestión de tareas en grupos de trabajo, permitiendo un registro completo de las actividades realizadas.</p>           
+            <b class="SubTems">Tecnologías Utilizadas:</b>
+            <p class="descSub">La aplicación está desarrollada utilizando Java como lenguaje de programación principal y el framework Spring Boot para facilitar la creación de aplicaciones web robustas y escalables. Spring Boot proporciona un conjunto de herramientas y convenciones que simplifican el desarrollo, permitiendo a los desarrolladores concentrarse en la lógica de negocio en lugar de en la configuración.</p>
+            <b class="SubTems">Funcionalidades Principales:</b>
+            <li>Asignación de Tareas: La aplicación permite a los usuarios crear grupos de trabajo y asignar tareas específicas a los miembros de cada grupo. Esta funcionalidad garantiza una distribución equitativa de las responsabilidades y facilita la colaboración entre los miembros del equipo.</li>
+            <li>Registro de Tareas: Cada tarea asignada se registra en una base de datos, lo que permite un seguimiento detallado del progreso y el estado de cada actividad. Esta función proporciona transparencia y accountability en el proceso de gestión de tareas.</li>
+            <li>Interfaz Intuitiva: La interfaz de usuario de la aplicación está diseñada de manera intuitiva para garantizar una experiencia de usuario fluida y satisfactoria. Los usuarios pueden acceder fácilmente a todas las funcionalidades de la aplicación y visualizar de manera clara el estado de las tareas asignadas.</li>
+           
+        </div>
+        <a th:href="@{/Tasks}">Ver Tareas</a>
+    </div>
+</body>
+</html>
