@@ -2,19 +2,31 @@ body {
     background-image: url('/IMG/Fondo.jpg');
     color: #fff;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cards se envuelvan a una nueva línea si no caben en el ancho disponible */
+    justify-content: center; /* Centra los cards horizontalmente */
 }
 
 .card {
+    margin: 20px;
     border: 2px solid white;
     background-color: #141414bb;
     width: 300px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px; /* Espacio entre los cards */
 }
-.card:hover{
-border: 2px solid rgb(252, 252, 40);
+
+.card:hover {
+    border: 2px solid rgb(252, 252, 40);
 }
+
 .card-header {
     border-bottom: 1px solid #fff;
     padding-bottom: 10px;

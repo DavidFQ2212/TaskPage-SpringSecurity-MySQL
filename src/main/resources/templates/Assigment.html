@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/CSS/Assigment.css">
+    <link rel="stylesheet" href="/CSS/NavFooter.css">
 </head>
 <body>
+    <nav class="nav">
+        <a th:href="@{/Tasks}">Ver Tareas</a>
+        <a th:href="@{/Session}">iniciar Sesion</a>
+        <a th:href="@{/Assigment}">Asignar</a>
+    </nav>
     <div class="form-container">
         <h1>Ingrese los datos Para la Asignar la tarea</h1>
         <input type="text" placeholder="Ingrese el Título" class="input-field">
@@ -18,7 +24,9 @@
         <input type="text" placeholder="Destinatario" class="input-field">
         <button class="submit-button">Enviar</button>
     </div>
-    
+    <footer  class="footer">
+        <a th:href="@{/}">Volver</a>
+</footer>
     
 </body>
 </html>

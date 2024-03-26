@@ -1,12 +1,18 @@
 <!DOCTYPE html>
- <html xmlns:th="http://www.thymeleaf.org" lang="es"></html>>
+ <html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plataforma de Gestión de Tareas</title>
 <link rel="stylesheet" href="/CSS/HomePage.css">
+<link rel="stylesheet" href="/CSS/NavFooter.css">
 </head>
 <body>
+    <nav class="nav">
+        <a th:href="@{/Tasks}">Ver Tareas</a>
+        <a th:href="@{/Session}">iniciar Sesion</a>
+        <a th:href="@{/Assigment}">Asignar</a>
+    </nav>
     <div class="container">
         <h1>Desarrollo de una Aplicación Web en Java con Spring Boot para Gestión de Tareas en Grupos de Trabajo</h1>
         <div class="descripcion">
@@ -17,9 +23,10 @@
             <li>Asignación de Tareas: La aplicación permite a los usuarios crear grupos de trabajo y asignar tareas específicas a los miembros de cada grupo. Esta funcionalidad garantiza una distribución equitativa de las responsabilidades y facilita la colaboración entre los miembros del equipo.</li>
             <li>Registro de Tareas: Cada tarea asignada se registra en una base de datos, lo que permite un seguimiento detallado del progreso y el estado de cada actividad. Esta función proporciona transparencia y accountability en el proceso de gestión de tareas.</li>
             <li>Interfaz Intuitiva: La interfaz de usuario de la aplicación está diseñada de manera intuitiva para garantizar una experiencia de usuario fluida y satisfactoria. Los usuarios pueden acceder fácilmente a todas las funcionalidades de la aplicación y visualizar de manera clara el estado de las tareas asignadas.</li>
-           
         </div>
-        <a th:href="@{/Tasks}">Ver Tareas</a>
     </div>
+    <footer  class="footer">
+            <a th:href="@{/}">Volver</a>
+    </footer>
 </body>
 </html>
