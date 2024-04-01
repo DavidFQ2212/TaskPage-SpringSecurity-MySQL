@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,25 @@
         <a th:href="@{/Assigment}">Asignar</a>
     </nav>
     <div class="form-container">
-        <h1>Ingrese los datos Para la Asignar la tarea</h1>
-        <input type="text" placeholder="Ingrese el Título" class="input-field">
-        <textarea placeholder="Descripción o detalles" class="textarea-field"></textarea>
+        <form th:action="@{/SaveTask}" th:object="${Task}" method="POST">
+            <h1>Ingrese los datos Para la Asignar la tarea</h1>
+            <input type="hidden" th:field="*{idtarea}">
+        <input type="text" placeholder="Ingrese el Título" class="input-field" th:field="*{titulo}">
+        
+        <textarea placeholder="Descripción o detalles" class="textarea-field" th:field="*{descripcion}"></textarea>
+        
         <div class="date-container">
-            <input type="date" placeholder="Fecha Solicitud" class="input-field">
-            <input type="date" placeholder="Fecha Entrega" class="input-field">
+            <input type="date" placeholder="Fecha Solicitud" class="input-field" th:field="*{fechai}">
+            <input type="date" placeholder="Fecha Entrega" class="input-field" th:field="*{fechaf">
         </div>
-        <input type="text" placeholder="Destinatario" class="input-field">
+        
+        <input type="text" placeholder="Destinatario" class="input-field" th:field="*{destinatario}">
+        <input type="text" placeholder="Destinatario" class="input-field" th:field="*{usuario}">
+        
         <button class="submit-button">Enviar</button>
+        
+        </form>
+        
     </div>
     <footer  class="footer">
         <a th:href="@{/}">Volver</a>
