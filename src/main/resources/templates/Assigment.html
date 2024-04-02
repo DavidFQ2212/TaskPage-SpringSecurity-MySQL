@@ -14,7 +14,7 @@
         <a th:href="@{/Assigment}">Asignar</a>
     </nav>
     <div class="form-container">
-        <form th:action="@{/SaveTask}" th:object="${Task}" method="POST">
+        <form th:action="@{/SaveTask}" th:object="${task}" method="POST">
             <h1>Ingrese los datos Para la Asignar la tarea</h1>
             <input type="hidden" th:field="*{idtarea}">
         <input type="text" placeholder="Ingrese el Título" class="input-field" th:field="*{titulo}">
@@ -23,13 +23,13 @@
         
         <div class="date-container">
             <input type="date" placeholder="Fecha Solicitud" class="input-field" th:field="*{fechai}">
-            <input type="date" placeholder="Fecha Entrega" class="input-field" th:field="*{fechaf">
+            <input type="date" placeholder="Fecha Entrega" class="input-field" th:field="*{fechaf}">
         </div>
         
         <input type="text" placeholder="Destinatario" class="input-field" th:field="*{destinatario}">
         <input type="text" placeholder="Destinatario" class="input-field" th:field="*{usuario}">
         
-        <button class="submit-button">Enviar</button>
+        <input type="submit" value="ARegistrar" class="form-itemsIn" id="">
         
         </form>
         

@@ -38,7 +38,8 @@ public class HomeControlador {
     }
     
     @GetMapping("/Assigment")
-    public String Assigment(){
+    public String Assigment(Task task){
+        
         return "Assigment";
     }
     
