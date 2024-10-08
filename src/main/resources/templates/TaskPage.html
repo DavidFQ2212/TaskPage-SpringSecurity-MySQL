@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
 <link rel="stylesheet" href="/CSS/TaskPage.css">
 <link rel="stylesheet" href="/CSS/NavFooter.css">
+
 </head>
 <body>
     <nav class="nav">
@@ -10,18 +11,20 @@
         <a th:href="@{/Session}">iniciar Sesion</a>
         <a th:href="@{/Assigment}">Asignar</a>
     </nav>
-    <div class="container">
-        <h1>Titulo</h1>
-        <p class="Description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ipsum atque hic optio aliquid ipsam, sequi exercitationem repellendus quae assumenda animi voluptates? Autem sint a harum inventore deleniti sed dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima nostrum tempora laudantium natus, sit in nisi aliquam dolores ducimus ad debitis soluta, accusantium doloremque voluptas dicta magnam impedit optio qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, tenetur mollitia nostrum itaque qui hic ullam facere dignissimos, possimus ut ratione cumque. Corrupti fuga quos facilis perferendis commodi omnis earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus sunt nam nobis officia vero, magni velit molestias, quaerat iure odio laudantium labore ratione, inventore quisquam dicta tempora. Minus, at!</p>
+    <div class="container" th:each="task : ${tasks}" >
+        <p th:text="${task.idtarea}">id</p>
+        <h1 th:text="${task.titulo}">Titulo</h1>
+        <p class="Description" th:text="${task.descripcion}">Descripcion</p>
         <p>Autor:</p>
-        <p class="important">David FloresQ</p>
-
+        <p class="important" th:text="${task.usuario}">autor</p>
+        <p>Destinatario</p>
+        <p class="important" th:text="${task.destinatario}">destinatario</p>
         <p>Fecha de publicación</p>
-        <p class="important">20/07/2022</p>
+        <p class="important" th:text="${task.fechai}">date</p>
         <p>Fecha de entrega</p>
-        <p class="important">20/07/2022</p>
+        <p class="important" th:text="${task.fechaf}">date</p>
         <p>Estado:</p>
-        <p class="statusTask">Completada</p>
+        <p class="statusTask" >estado</p>
     </div>
     <footer  class="footer">
         <a th:href="@{/}">Volver</a>

@@ -24,8 +24,10 @@ public class HomeControlador {
     }
 
 
-    @GetMapping("/TaskDetails")
-    public String TaskDetails(){
+    @GetMapping("/TaskDetails/{idtarea}")
+    public String TaskDetails(Task task , Model model){
+        task = taskS.findTask(task);
+        model.addAttribute("tasks", task);
         return "TaskPage";
     }
 
@@ -48,13 +50,13 @@ public class HomeControlador {
         taskS.SaveTask(task);
         return "redirect:/Tasks";
     }
-
     @GetMapping("/EditTask/{idtarea}")
     public String editar(Task task, Model model) {
         task = taskS.findTask(task);
         model.addAttribute("tasks", task);
         return "TaskPage";
     }
+
 
     @GetMapping("/DeleteTask/{idtarea}")
     public String elimina(Task task) {

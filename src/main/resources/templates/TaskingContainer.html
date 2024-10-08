@@ -13,24 +13,31 @@
         <a th:href="@{/Session}">iniciar Sesion</a>
         <a th:href="@{/Assigment}">Asignar</a>
     </nav>
-    <div class="card-container">
-        
-        <div class="card" th:each="task : ${tasks}">
-            <p th:text="${task.idtarea}">id</p>
-            <div class="card-header">
-                <h1 th:text="${task.titulo}">Titulo</h1>
-                <p th:text="${task.usuario}">Autor</p>
-            </div>
-            <p th:text="${task.descripcion}">descripcion</p>
-            <div class="card-info">
-                <p th:text="${task.destinatario}"><strong >Destinatario</strong>: Destinatario</p>
-                <p th:text="${task.fechai}"><strong>fechaPedido:</strong>fechaInicial</p>
-                <p th:text="${task.fechaf}"><strong>fechaEntrega</strong>fechaFinal</p>
-            </div>
+  
+   
+    <div th:each="task : ${tasks}" class="card-container">
+ 
+            <a  id="Edit" th:href="@{/TaskDetails/} + ${task.idtarea}" >
+                <div class="card" >
+                    
+                    <p th:text="${task.idtarea}">id</p>
+                    <div class="card-header">
+                        <h1 th:text="${task.titulo}">Titulo</h1>
+                        <p th:text="${task.usuario}">Autor</p>
+                    </div>
+                    <p th:text="${task.descripcion}">descripcion</p>
+                    <div class="card-info">
+                        <p th:text="${task.destinatario}"><strong >Destinatario</strong>: Destinatario</p>
+                        <p th:text="${task.fechai}"><strong>fechaPedido:</strong>fechaInicial</p>
+                        <p th:text="${task.fechaf}"><strong>fechaEntrega</strong>fechaFinal</p>
+                    </div>
+            </a>
+
         </div>
-        
-    <footer  class="footer">
+
+<footer  class="footer">
         <a th:href="@{/}">Volver</a>
 </footer>
+
 </body>
 </html>     
